@@ -10,33 +10,35 @@ It can be configured to run periodically using CloudWatch events.
 ## Quick start
 
 1. Create an AWS lambda function:
-    - Author from scratch
-    - Runtime: Node.js 14.x
+   - Author from scratch
+   - Runtime: Node.js 14.x
 2. tab "Code" -> "Upload from" -> ".zip file":
-    - Upload ([pgdump-aws-lambda.zip](https://github.com/jameshy/pgdump-aws-lambda/releases/latest))
-    - tab "Configuration" -> "General Configuration" -> "Edit"
-        - Timeout: 15 minutes
-        - Edit the role and attach the policy "AmazonS3FullAccess"
-    - Save
+   - Upload ([pgdump-aws-lambda.zip](https://github.com/jameshy/pgdump-aws-lambda/releases/latest))
+   - tab "Configuration" -> "General Configuration" -> "Edit"
+     - Timeout: 15 minutes
+     - Edit the role and attach the policy "AmazonS3FullAccess"
+   - Save
 3. Test
-    - Create new test event, e.g.:
-    ```json
-    {
-        "PGDATABASE": "dbname",
-        "PGUSER": "postgres",
-        "PGPASSWORD": "password",
-        "PGHOST": "host",
-        "S3_BUCKET" : "db-backups",
-        "ROOT": "hourly-backups"
-    }
-    ```
-    - *Test* and check the output
+
+   - Create new test event, e.g.:
+
+   ```json
+   {
+     "PGDATABASE": "dbname",
+     "PGUSER": "postgres",
+     "PGPASSWORD": "password",
+     "PGHOST": "host",
+     "S3_BUCKET": "db-backups",
+     "ROOT": "hourly-backups"
+   }
+   ```
+
+   - _Test_ and check the output
 
 4. Create a CloudWatch rule:
-    - Event Source: Schedule -> Fixed rate of 1 hour
-    - Targets: Lambda Function (the one created in step #1)
-    - Configure input -> Constant (JSON text) and paste your config (as per previous step)
-
+   - Event Source: Schedule -> Fixed rate of 1 hour
+   - Targets: Lambda Function (the one created in step #1)
+   - Configure input -> Constant (JSON text) and paste your config (as per previous step)
 
 #### File Naming
 
@@ -55,13 +57,13 @@ You can add an encryption key to your event, e.g.
 
 ```json
 {
-    "PGDATABASE": "dbname",
-    "PGUSER": "postgres",
-    "PGPASSWORD": "password",
-    "PGHOST": "host",
-    "S3_BUCKET" : "db-backups",
-    "ROOT": "hourly-backups",
-    "ENCRYPT_KEY": "c0d71d7ae094bdde1ef60db8503079ce615e71644133dc22e9686dc7216de8d0"
+  "PGDATABASE": "dbname",
+  "PGUSER": "postgres",
+  "PGPASSWORD": "password",
+  "PGHOST": "host",
+  "S3_BUCKET": "db-backups",
+  "ROOT": "hourly-backups",
+  "ENCRYPT_KEY": "c0d71d7ae094bdde1ef60db8503079ce615e71644133dc22e9686dc7216de8d0"
 }
 ```
 
@@ -88,14 +90,13 @@ Your context may require that you use IAM-based authentication to log into the P
 Support for this can be enabled my making your Cloudwatch Event look like this.
 
 ```json
-
 {
-     "PGDATABASE": "dbname",
-     "PGUSER": "postgres",
-     "PGHOST": "host",
-     "S3_BUCKET" : "db-backups",
-     "ROOT": "hourly-backups",
-     "USE_IAM_AUTH": true
+  "PGDATABASE": "dbname",
+  "PGUSER": "postgres",
+  "PGHOST": "host",
+  "S3_BUCKET": "db-backups",
+  "ROOT": "hourly-backups",
+  "USE_IAM_AUTH": true
 }
 ```
 
@@ -105,8 +106,10 @@ If you still provide it, it will be ignored.
 ## Developer
 
 #### Bundling a new `pg_dump` binary
+
 1. Launch an EC2 instance with the Amazon Linux 2 AMI
 2. Connect via SSH and:
+
 ```bash
 
 # install postgres 13
@@ -132,10 +135,12 @@ scp -i ~/aws.pem ec2-user@18.157.84.236:/usr/bin/pg_dump ./bin/postgres-13.3/pg_
 scp -i ~/aws.pem ec2-user@18.157.84.236:/usr/lib64/{libcrypt.so.1,libnss3.so,libsmime3.so,libssl3.so,libsasl2.so.3,liblber-2.4.so.2,libldap_r-2.4.so.2} ./bin/postgres-13.3/
 scp -i ~/aws.pem ec2-user@18.157.84.236:/usr/pgsql-13/lib/libpq.so.5 ./bin/postgres-13.3/libpq.so.5
 ```
+
 3. To use the new postgres binary pass PGDUMP_PATH in the event:
+
 ```json
 {
-    "PGDUMP_PATH": "bin/postgres-13.3"
+  "PGDUMP_PATH": "bin/postgres-13.3"
 }
 ```
 

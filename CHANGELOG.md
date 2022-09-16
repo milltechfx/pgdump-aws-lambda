@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.0.2...v1.0.3) (2022-09-16)
+
+
+### Bug Fixes
+
+* add SQL to filename ([51c51e5](https://github.com/milltechfx/pgdump-aws-lambda/commit/51c51e5d792a1a54f8b45d50d9c4682090a5778d))
+
 ## [1.0.2](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.0.1...v1.0.2) (2022-09-16)
 
 

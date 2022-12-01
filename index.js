@@ -1,5 +1,5 @@
-const backup = require("./lib/pgdump");
-const restore = require("./lib/pgrestore");
+const backup = require("./lib/backup");
+const restore = require("./lib/restore");
 
 module.exports.backup = backup;
 module.exports.restore = restore;

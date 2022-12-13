@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.0.4...v1.1.0) (2022-12-13)
+
+
+### Features
+
+* refactor + add mongodump and restore ([a911a22](https://github.com/milltechfx/pgdump-aws-lambda/commit/a911a22e0681b38412fe8cc05e96aaf06b5410c3))
+* split up files ([e50b678](https://github.com/milltechfx/pgdump-aws-lambda/commit/e50b6786264e31841666496526b10363732fea73))
+
 ## [1.0.4](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.0.3...v1.0.4) (2022-11-23)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.1.2...v1.1.3) (2023-02-10)
+
+
+### Bug Fixes
+
+* escape mongo pwd ([8ec4fe1](https://github.com/milltechfx/pgdump-aws-lambda/commit/8ec4fe15018072202cd7b140ff654909a68f05c6))
+
 ## [1.1.2](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.1.1...v1.1.2) (2023-01-12)
 
 

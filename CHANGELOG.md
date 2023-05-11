@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.1.3...v1.1.4) (2023-05-11)
+
+
+### Bug Fixes
+
+* await download and extra logging ([c2537d3](https://github.com/milltechfx/pgdump-aws-lambda/commit/c2537d3ee249537397dad1d0d71d191907ef0004))
+
 ## [1.1.3](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.1.2...v1.1.3) (2023-02-10)
 
 

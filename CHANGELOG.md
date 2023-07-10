@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.4...v1.1.5) (2023-07-10)
+
+
+### Bug Fixes
+
+* fix backfile file name ([92c3314](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/commit/92c3314cc39065e1cc7a1af15bffd362e8ba07f7))
+
 ## [1.1.4](https://github.com/milltechfx/pgdump-aws-lambda/compare/v1.1.3...v1.1.4) (2023-05-11)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.5...v1.1.6) (2023-07-11)
+
+
+### Bug Fixes
+
+* change backup file name ([d2a6b4c](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/commit/d2a6b4c8d66e9de93b943c57a8cc1bc5c32644dc))
+
 ## [1.1.5](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.4...v1.1.5) (2023-07-10)
 
 

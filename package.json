@@ -7,7 +7,6 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
-    "@milltechfx/style": "^1.1.2",
     "moment": "2.29.4"
   },
   "devDependencies": {
@@ -26,7 +25,8 @@
     "nyc": "15.1.0",
     "rewire": "5.0.0",
     "sinon": "11.1.1",
-    "tmp": "0.2.1"
+    "tmp": "0.2.1",
+    "@milltechfx/style": "^1.1.2"
   },
   "scripts": {
     "test": "NODE_ENV=test mocha test",

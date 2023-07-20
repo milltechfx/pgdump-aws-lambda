@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/@milltechfx/style/.eslintrc.json",
+  "env": {
+    "jest": true
+  },
+  "rules": {
+    "@typescript-eslint/ban-ts-comment": "warning"
+  }
+}

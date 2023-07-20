@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.7](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.6...v1.1.7) (2023-07-20)
+
+
+### Bug Fixes
+
+* fix await s3 download ([699c9e9](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/commit/699c9e9c6651f3304e0cdad557438adb0a82a6fb))
+
 ## [1.1.6](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.5...v1.1.6) (2023-07-11)
 
 

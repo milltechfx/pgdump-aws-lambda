@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.7...v1.1.8) (2023-07-20)
+
+
+### Bug Fixes
+
+* tify up ([9e3c4f3](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/commit/9e3c4f3b98134a9181510ec98dcd291914383f24))
+
 ## [1.1.7](https://github.com/milltechfx/MillTechFX.pgdump-aws-lambda/compare/v1.1.6...v1.1.7) (2023-07-20)
 
 
